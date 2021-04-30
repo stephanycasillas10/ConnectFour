@@ -2,3 +2,11 @@
   font-family: sans-serif;
   text-align: center;
 }
+.circle {
+  height: 30px;
+  width: 30px;
+  border: solid black 1px;
+  border-radius: 40px;
+}
+.grid {
+}

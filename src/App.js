@@ -1,10 +1,20 @@
 import "./styles.css";
-
+import Circle from "./Circle/Circle";
 export default function App() {
+  const arr = [[]];
+  var x = new Array(10);
+
+  for (var i = 0; i < x.length; i++) {
+    x[i] = new Array(3);
+  }
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <div className="circle"> </div>
+      <div className="grid"> </div>
+      <div className="header">
+        <h1>Connect Four</h1>
+      </div>
+      {arr.map((column) => column.map((row) => <Circle />))}
     </div>
   );
 }
