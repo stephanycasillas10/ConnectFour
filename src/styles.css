@@ -2,11 +2,13 @@
   font-family: sans-serif;
   text-align: center;
 }
-.circle {
-  height: 30px;
-  width: 30px;
-  border: solid black 1px;
-  border-radius: 40px;
+.row {
+  display: flex;
 }
-.grid {
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: solid black 1px;
 }

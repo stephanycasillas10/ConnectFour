@@ -1,20 +1,26 @@
 import "./styles.css";
-import Circle from "./Circle/Circle";
+import React, { useState } from "react";
+const spaceState = {};
+const columns = new Array(6).fill(spaceState);
+const connect4BoardArr = columns.map((row) => new Array(7).fill(spaceState));
 export default function App() {
-  const arr = [[]];
-  var x = new Array(10);
+  const [connect4Board, setConnect4Board] = useState(connect4BoardArr);
+  const handleClick =(event) => (event.target.innerText) ="x";
 
-  for (var i = 0; i < x.length; i++) {
-    x[i] = new Array(3);
-  }
   return (
-    <div className="App">
-      <div className="circle"> </div>
-      <div className="grid"> </div>
-      <div className="header">
-        <h1>Connect Four</h1>
-      </div>
-      {arr.map((column) => column.map((row) => <Circle />))}
+    <div className="App" onClick={handleClick}>
+      <h1> Connect Four </h1>
+      {connect4Board.map((row) => (
+        <div className="row">
+          {row.map((circle) => (
+            <div className="circle" />
+          ))}
+        </div>
+      ))}
     </div>
   );
 }
+
+
+  
+
