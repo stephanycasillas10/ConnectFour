@@ -1,0 +1,14 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.row {
+  display: flex;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: solid black 1px;
+}

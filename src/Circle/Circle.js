@@ -1,4 +1,11 @@
 import React from "react";
-const Circle = () => {
-  return <div className="Circle"></div>;
+const Circle = ({ fillColor, row, column, handleClick }) => {
+  return (
+    <div
+      className="circle"
+      onClick={() => handleClick(row, column)}
+      style={{ backgroundColor: fillColor }}
+    ></div>
+  );
 };
+export default Circle;
